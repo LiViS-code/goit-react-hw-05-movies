@@ -1,44 +1,18 @@
-import React, { Component } from "react";
-import {
-  Container,
-  Title,
-  Logo,
-  Button,
-  SubTitle,
-  List,
-  ListItem,
-  Link,
-} from "./App.styled";
-import logo from "./img/logo.png";
-import toastMsg from "./utils/toastMsg";
+import { Routes, Route } from "react-router-dom";
+import { Container } from "./App.styled";
+import AppBar from "./components/AppBar/AppBar";
+import HomeView from "./views/HomeView";
+import MoviesView from "./views/MoviesView";
 
-class App extends Component {
-  onClick = () => {
-    console.log("click");
-    toastMsg("my project is working!", "info");
-  };
+export default function App() {
+  return (
+    <Container>
+      <AppBar />
+      <Routes>
+        <Route path="/" element={<HomeView />} />
 
-  render() {
-    return (
-      <Container>
-        <Title>
-          <Logo src={logo} alt="logo" width="50px" />
-          My-project
-        </Title>
-        <SubTitle>Template list</SubTitle>
-        <List>
-          <ListItem>Sample list item</ListItem>
-          <ListItem>Sample list item</ListItem>
-          <ListItem>Sample list item</ListItem>
-        </List>
-        <Link href="#">Sample link</Link>
-        <br /> <br />
-        <Button type="button" onClick={this.onClick}>
-          Click me
-        </Button>
-      </Container>
-    );
-  }
+        <Route path="/movies" element={<MoviesView />} />
+      </Routes>
+    </Container>
+  );
 }
-
-export default App;

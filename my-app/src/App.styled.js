@@ -12,7 +12,6 @@ const {
     backgroundDisabledColor,
     backgroundColor,
     disabledColor,
-    boxShadow,
   },
   transition: { timing, timingFunction },
   spacing,
@@ -20,16 +19,11 @@ const {
 
 export const Container = styled.div`
   font-family: "Poppins", sans-serif;
-  width: 85%;
-  max-width: 320px;
-  min-width: 300px;
-  margin: 0 auto;
   padding: ${spacing(5)};
   font-size: 1em;
   border-radius: ${spacing(2)};
   color: ${primaryColor};
   background-color: ${backgroundColor};
-  box-shadow: ${boxShadow};
 `;
 
 export const Logo = styled.img`
