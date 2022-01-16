@@ -1,10 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {BrowserRouter} from 'react-router-dom';
+import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./constants/Theme";
 import { ToastContainer } from "react-toastify";
 import App from "./App";
+
+const rootElement = document.getElementById("root");
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,5 +17,5 @@ ReactDOM.render(
       </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById("root")
+  rootElement
 );

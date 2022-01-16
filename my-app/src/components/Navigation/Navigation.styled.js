@@ -35,11 +35,16 @@ export const Link = styled(NavLink)`
   text-decoration: none;
   font-weight: 700;
   transition: text-decoration ${timing} ${timingFunction};
-  &:hover,
+  &:hover {
+    outline: 2px solid ${primaryColor};
+  }
   &:focus {
     color: ${accentColor};
     background-color: ${primaryColor};
-    border-radius: 0.3em;
-    outline-offset: 0.3em;
+  }
+  &:hover,
+  &:focus {
+    border-radius: ${spacing(2)};
+    outline-offset: ${spacing(0.5)};
   }
 `;
