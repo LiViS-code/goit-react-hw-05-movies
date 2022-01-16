@@ -9,9 +9,8 @@ export default function App() {
     <Container>
       <AppBar />
       <Routes>
-        <Route path="/" element={<HomeView />} />
-
-        <Route path="/movies" element={<MoviesView />} />
+        <Route path="" element={<HomeView />} />
+        <Route path="movies" element={<MoviesView />} />
       </Routes>
     </Container>
   );
