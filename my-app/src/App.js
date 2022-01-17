@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { Container } from "./App.styled";
 import Layout from "./components/Layout/Layout";
+import NotfoundPage from "./components/NotfoundPage/NotfoundPage";
 import Home from "./routes/Home";
 import Movies from "./routes/Movies";
 
@@ -11,6 +12,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="movies" element={<Movies />} />
+          <Route path="*" element={<NotfoundPage />} />
         </Route>
       </Routes>
     </Container>

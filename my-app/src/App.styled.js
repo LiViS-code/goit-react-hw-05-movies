@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { theme } from "./constants/Theme";
 
@@ -121,16 +122,18 @@ export const Note = styled.span`
   font-size: 0.85em;
 `;
 
-export const Link = styled.a`
+export const LinkTo = styled(Link)`
+  padding: ${spacing(1)} ${spacing(2)};
   color: inherit;
   text-decoration: none;
   font-weight: 700;
-  transition: text-decoration ${timing} ${timingFunction};
+  border-radius: ${spacing(2)};
+  transition: color ${timing} ${timingFunction},
+    background-color ${timing} ${timingFunction};
+
   &:hover,
   &:focus {
-    color: inherit;
-    outline: 2px solid ${accentColor};
-    border-radius: 0.3em;
-    outline-offset: 0.3em;
+    color: ${accentColor};
+    background-color: ${primaryColor};
   }
 `;
