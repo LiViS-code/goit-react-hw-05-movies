@@ -29,7 +29,7 @@ export const ListItem = styled.li`
   }
 `;
 
-export const Link = styled(NavLink)`
+export const NavigationLink = styled(NavLink)`
   padding: ${spacing(2)};
   color: inherit;
   text-decoration: none;
@@ -38,12 +38,14 @@ export const Link = styled(NavLink)`
   &:hover {
     outline: 2px solid ${primaryColor};
   }
-  &:focus {
+  &:focus,
+  &.active {
     color: ${accentColor};
     background-color: ${primaryColor};
   }
   &:hover,
-  &:focus {
+  &:focus,
+  &.active {
     border-radius: ${spacing(2)};
     outline-offset: ${spacing(0.5)};
   }
