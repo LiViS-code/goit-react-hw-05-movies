@@ -8,10 +8,10 @@ export const Header = styled.header`
 `;
 
 export const Footer = styled.footer`
-  position: fixed;
+  /* position: fixed; */
   padding: ${spacing(4)};
-  left: 0px;
-  bottom: 0px;
+  /* left: 0px;
+  bottom: 0px; */
   height: 30px;
   width: 100%;
 `;

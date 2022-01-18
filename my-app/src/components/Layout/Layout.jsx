@@ -12,7 +12,7 @@ export default function Layout() {
       <Outlet />
 
       <Footer>
-        Developed <a href="tel:+380675034464">Vasily Lopatkin</a>. 2022
+        Developed <a href="tel:+380675034464">Vasily Lopatkin</a>. January 2022.
       </Footer>
     </>
   );
