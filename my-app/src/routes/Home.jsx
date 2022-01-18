@@ -17,7 +17,7 @@ export default function Home() {
       {filmsTrending.map(({ id, original_title }) => {
         return (
           <li key={id}>
-            <Link to={`/${id}`}>{original_title}</Link>
+            <Link to={`/movies/${id}`}>{original_title}</Link>
           </li>
         );
       })}
