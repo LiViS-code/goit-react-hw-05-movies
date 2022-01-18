@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <h1>Trending today</h1>
-      {filmsTrending.map(({ id, original_title, poster_path }) => {
+      {filmsTrending.map(({ id, original_title }) => {
         return (
           <li key={id}>
             <Link to={`/${id}`}>{original_title}</Link>
