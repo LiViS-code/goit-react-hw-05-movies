@@ -20,7 +20,6 @@ const {
 
 export const Container = styled.div`
   font-family: "Poppins", sans-serif;
-  padding: ${spacing(5)};
   font-size: 1em;
   border-radius: ${spacing(2)};
   color: ${primaryColor};
@@ -35,13 +34,13 @@ export const Logo = styled.img`
 export const Title = styled.h1`
   margin-top: 0;
   margin-bottom: ${spacing(4)};
-  font-size: 1.8em;
+  font-size: 1.5em;
 `;
 
 export const SubTitle = styled.h2`
   margin-top: 0;
   margin-bottom: ${theme.spacing(4)};
-  font-size: 1.4em;
+  font-size: 1.3em;
 `;
 
 export const Message = styled.p`
@@ -103,8 +102,8 @@ export const Button = styled.button`
 `;
 
 export const List = styled.ul`
-  padding-left: 0;
   margin-bottom: ${spacing(4)};
+  padding-left: ${spacing(3)};
   list-style: none;
 `;
 
@@ -120,6 +119,7 @@ export const ListItem = styled.li`
 export const Note = styled.span`
   margin-right: ${spacing(3)};
   font-size: 0.85em;
+  list-style: circle;
 `;
 
 export const LinkTo = styled(Link)`
