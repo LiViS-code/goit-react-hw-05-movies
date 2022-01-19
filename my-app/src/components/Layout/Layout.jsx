@@ -1,6 +1,6 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import Navigation from "../Navigation/Navigation";
-import { Header, Footer } from "./Layout.styled";
+import { Header, Footer, Wrapper } from "./Layout.styled";
 
 export default function Layout() {
   return (
@@ -8,9 +8,10 @@ export default function Layout() {
       <Header>
         <Navigation />
       </Header>
-
-      <Outlet />
-
+      <Link to="/">Go back</Link>
+      <Wrapper>
+        <Outlet />
+      </Wrapper>
       <Footer>
         Developed <a href="tel:+380675034464">Vasily Lopatkin</a>. January 2022.
       </Footer>
