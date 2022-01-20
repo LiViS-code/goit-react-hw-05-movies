@@ -9,6 +9,7 @@ const {
 export const Container = styled.div`
   max-width: 100%;
   display: flex;
+  padding-top: ${spacing(4)};
 `;
 
 export const DataContainer = styled(Container)`
