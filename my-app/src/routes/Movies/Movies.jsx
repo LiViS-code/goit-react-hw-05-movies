@@ -6,22 +6,25 @@ import { getMovieByName } from "../../utils/ApiService.js";
 
 export default function Movies() {
   const [movieData, setMovieData] = useState(null);
-  const { id } = useParams();
+  let { id, query } = useParams();
 
   useEffect(() => {
     console.log("зашел в поиск");
-  }, [id]);
+    console.log("movieData", movieData);
+  }, [id, movieData]);
 
   const findMovie = (request) => {
     getMovieByName(request).then((data) => {
       console.log("search result:", data.results);
       setMovieData(data.results);
+      query = request;
     });
   };
 
   return (
     <>
       <SearchBar findMovie={findMovie} />
+      <p>{query}</p>
       {movieData && <MovieList movieData={movieData} />}
     </>
   );
