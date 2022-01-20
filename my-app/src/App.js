@@ -3,7 +3,8 @@ import Layout from "./components/Layout/Layout";
 import NotfoundPage from "./components/NotfoundPage/NotfoundPage";
 import Home from "./routes/Home/Home";
 import Movies from "./routes/Movies/Movies";
-import MoviesCard from "./routes/MovieCard/MovieCard";
+import MovieCard from "./routes/MovieCard/MovieCard";
+// import MovieList from "./components/MovieList/MovieList";
 
 export default function App() {
   return (
@@ -11,7 +12,7 @@ export default function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="movies" element={<Movies />} />
-        <Route path="movies/:id" element={<MoviesCard />} />
+        <Route path="movies/:id" element={<MovieCard />} />
         <Route path="*" element={<NotfoundPage />} />
       </Route>
     </Routes>
