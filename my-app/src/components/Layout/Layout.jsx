@@ -1,6 +1,7 @@
 import { Link, Outlet, useNavigate, useLocation } from "react-router-dom";
 import Navigation from "../Navigation/Navigation";
-import { Header, Footer, Wrapper } from "./Layout.styled";
+import { Header, Footer, Main } from "./Layout.styled";
+import { LinkTo } from "../../App.styled";
 
 export default function Layout() {
   const navigate = useNavigate();
@@ -15,14 +16,15 @@ export default function Layout() {
       <Header>
         <Navigation />
       </Header>
-      {!isHome && (
-        <Link to="/" onClick={goBack}>
-          Go back
-        </Link>
-      )}
-      <Wrapper>
+      <Main>
+        {!isHome && (
+          <LinkTo to="" onClick={goBack}>
+            &lArr; Go back
+          </LinkTo>
+        )}
+
         <Outlet />
-      </Wrapper>
+      </Main>
       <Footer>
         Developed <a href="tel:+380675034464">Vasily Lopatkin</a>. January 2022.
       </Footer>
