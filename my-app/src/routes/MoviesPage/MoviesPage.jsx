@@ -3,7 +3,7 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import MovieList from "../../components/MovieList/MovieList";
 import { getMovieByName } from "../../utils/ApiService.js";
 
-export default function Movies() {
+export default function MoviesPage() {
   const [movieData, setMovieData] = useState(null);
   // useSt;
 

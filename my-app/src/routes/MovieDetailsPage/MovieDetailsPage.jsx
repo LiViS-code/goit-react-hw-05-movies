@@ -4,7 +4,7 @@ import MovieInfo from "../../components/MovieInfo/MovieInfo";
 
 import { getMovieById } from "../../utils/ApiService";
 
-export default function MovieCard() {
+export default function MovieDetailsPage() {
   const { movieId } = useParams();
   const [movieData, setMovieData] = useState([]);
   useEffect(() => {
