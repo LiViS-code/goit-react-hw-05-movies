@@ -1,5 +1,6 @@
 import { useState } from "react";
 import toastMsg from "../../utils/toastMsg";
+import { SearchForm, SearchInput, SearchButton } from "./SearchBar.styled";
 
 export default function SearchBar({ findMovie }) {
   const [request, setRequest] = useState("");
@@ -24,15 +25,15 @@ export default function SearchBar({ findMovie }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
+    <SearchForm onSubmit={handleSubmit}>
+      <SearchInput
         type="text"
         name="search"
         value={request}
         placeholder="Enter movie name"
         onChange={handleInput}
       />
-      <button type="submit">Search</button>
-    </form>
+      <SearchButton type="submit">Search</SearchButton>
+    </SearchForm>
   );
 }
