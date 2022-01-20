@@ -1,4 +1,4 @@
-import { Link, Outlet, useNavigate, useLocation } from "react-router-dom";
+import { Outlet, useNavigate, useLocation } from "react-router-dom";
 import Navigation from "../Navigation/Navigation";
 import { Header, Footer, Main } from "./Layout.styled";
 import { LinkTo } from "../../App.styled";

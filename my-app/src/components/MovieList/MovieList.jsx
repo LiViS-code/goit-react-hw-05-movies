@@ -5,17 +5,13 @@ export default function MovieList({ movieData }) {
   return (
     <>
       <List>
-        {movieData ? (
-          movieData.map(({ id, original_title }) => {
-            return (
-              <ListItem key={id}>
-                <LinkTo to={`/movies/${id}`}>{original_title}</LinkTo>
-              </ListItem>
-            );
-          })
-        ) : (
-          <p>No data found</p>
-        )}
+        {movieData.map(({ id, original_title }) => {
+          return (
+            <ListItem key={id}>
+              <LinkTo to={`/movies/${id}`}>{original_title}</LinkTo>
+            </ListItem>
+          );
+        })}
       </List>
     </>
   );

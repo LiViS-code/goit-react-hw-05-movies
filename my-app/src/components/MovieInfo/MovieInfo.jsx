@@ -1,4 +1,3 @@
-import { useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 import {
   Container,
@@ -14,8 +13,6 @@ import {
 import { SubTitle, Title } from "../../App.styled";
 
 export default function MovieInfo({ movieData }) {
-  const location = useLocation();
-  console.log("location :>> ", location);
   const {
     original_title,
     overview,
