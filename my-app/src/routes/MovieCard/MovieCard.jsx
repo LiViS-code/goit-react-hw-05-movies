@@ -5,13 +5,13 @@ import MovieInfo from "../../components/MovieInfo/MovieInfo";
 import { getMovieById } from "../../utils/ApiService";
 
 export default function MovieCard() {
-  const { id } = useParams();
+  const { movieId } = useParams();
   const [movieData, setMovieData] = useState([]);
   useEffect(() => {
-    getMovieById(id).then((data) => {
+    getMovieById(movieId).then((data) => {
       setMovieData(data);
     });
-  }, [id]);
+  }, [movieId]);
 
   return (
     <>
