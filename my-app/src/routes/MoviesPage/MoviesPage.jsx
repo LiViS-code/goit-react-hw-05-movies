@@ -7,11 +7,11 @@ import { getMovieByName } from "../../utils/ApiService.js";
 export default function MoviesPage() {
   const [movieData, setMovieData] = useState(null);
   const location = useLocation();
-  const navigate = useNavigate();
+  const navigation = useNavigate();
   const searchQuery = new URLSearchParams(location.search).get("query") ?? "";
 
   let setSearch = (request) => {
-    navigate(`${location.search}?query=${request}`);
+    navigation(`${location.search}?query=${request}`);
   };
 
   useEffect(() => {
