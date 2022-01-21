@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { LinkTo } from "../../App.styled";
+import { Outlet, useParams } from "react-router-dom";
 import MovieInfo from "../../components/MovieInfo/MovieInfo";
-
 import { getMovieById } from "../../utils/ApiService";
 
 export default function MovieDetailsPage() {
@@ -16,10 +16,16 @@ export default function MovieDetailsPage() {
   return (
     <>
       <MovieInfo movieData={movieData} />
-
-      <p>Компонент с данными по актерам</p>
-
-      <p>Компонент с ревью на фильм</p>
+      <p>Additional information</p>
+      <ul>
+        <li>
+          <LinkTo to="cast">Cast</LinkTo>
+        </li>
+        <li>
+          <LinkTo to="reviews">Review</LinkTo>
+        </li>
+      </ul>
+      <Outlet />
     </>
   );
 }

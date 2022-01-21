@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import { ListItem, LinkTo, List } from "../../App.styled";
-
 export default function MovieList({ movieData }) {
   return (
     <>
