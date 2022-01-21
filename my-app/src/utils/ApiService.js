@@ -22,11 +22,22 @@ export async function getMovieTrending() {
 }
 
 export async function getMovieById(id) {
-  const URL = `${BASE_URL}/movie/${id}?api_key=${API_KEY}`;
+  const URL = `${BASE_URL}/movie/${id}?api_key=${API_KEY}&language=en-US`;
   return ApiService(URL);
 }
 
 export async function getMovieByName(name) {
-  const URL = `${BASE_URL}/search/movie?api_key=${API_KEY}&query=${name}`;
+  const URL = `${BASE_URL}/search/movie?api_key=${API_KEY}&query=${name}&language=en-US&page=1`;
+  return ApiService(URL);
+}
+
+export async function getCast(id) {
+  const URL = `${BASE_URL}/movie/${id}/credits?api_key=${API_KEY}&language=en-US`;
+  return ApiService(URL);
+}
+
+export async function getReviews(id) {
+  console.log("id", id);
+  const URL = `${BASE_URL}/movie/${id}/reviews?api_key=${API_KEY}&language=en-US&page=1`;
   return ApiService(URL);
 }
