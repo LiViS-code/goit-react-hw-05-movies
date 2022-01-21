@@ -2,7 +2,7 @@ import { useState } from "react";
 import toastMsg from "../../utils/toastMsg";
 import { SearchForm, SearchInput, SearchButton } from "./SearchBar.styled";
 
-export default function SearchBar({ findMovie }) {
+export default function SearchBar({ setSearch }) {
   const [request, setRequest] = useState("");
 
   const handleInput = (e) => {
@@ -19,8 +19,7 @@ export default function SearchBar({ findMovie }) {
       return;
     }
 
-    findMovie(request);
-
+    setSearch(request);
     setRequest("");
   };
 
