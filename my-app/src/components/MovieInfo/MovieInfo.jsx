@@ -40,7 +40,9 @@ export default function MovieInfo({ movieData }) {
           <DataBlock>
             <Title>
               {original_title}
-              {release_date ? `(${release_date.slice(0, 4)})` : null}
+              {release_date
+                ? `(${new Date(Date.parse(release_date)).getFullYear()})`
+                : null}
             </Title>
             <Text>User Score: {vote_average}</Text>
           </DataBlock>
