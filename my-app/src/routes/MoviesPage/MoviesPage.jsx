@@ -21,7 +21,6 @@ export default function MoviesPage() {
     });
     return () => {
       // надо очистить фетч...
-      console.log("очистка");
     };
   }, [searchQuery]);
 

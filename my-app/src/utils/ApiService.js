@@ -37,7 +37,6 @@ export async function getCast(id) {
 }
 
 export async function getReviews(id) {
-  console.log("id", id);
   const URL = `${BASE_URL}/movie/${id}/reviews?api_key=${API_KEY}&language=en-US&page=1`;
   return ApiService(URL);
 }

@@ -8,7 +8,6 @@ export default function Reviews() {
   useEffect(() => {
     getReviews(movieId).then((data) => {
       setReviewsData(data.results);
-      console.log("review results:", data.results);
     });
   }, [movieId]);
   return (

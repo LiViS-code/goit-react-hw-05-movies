@@ -10,7 +10,6 @@ export default function Cast() {
   useEffect(() => {
     getCast(movieId).then((data) => {
       setCastData(data.cast);
-      console.log("cast results:", data.cast);
     });
   }, [movieId]);
   return (
