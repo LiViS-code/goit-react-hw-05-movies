@@ -20,9 +20,7 @@ export default function MovieDetailsPage() {
     console.log("location.state (goBack)", location.state);
     console.log("location.state.from (goBack)", location.state.from);
 
-    location.state && location.state.from
-      ? navigation(location.state.from)
-      : navigation("/");
+    navigation(location?.state?.from ?? "/");
   };
 
   return (
