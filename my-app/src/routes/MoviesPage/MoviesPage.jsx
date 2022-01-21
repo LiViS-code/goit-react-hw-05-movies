@@ -19,6 +19,10 @@ export default function MoviesPage() {
     getMovieByName(searchQuery).then((data) => {
       setMovieData(data.results);
     });
+    return () => {
+      // надо очистить фетч...
+      console.log("очистка");
+    };
   }, [searchQuery]);
 
   return (
