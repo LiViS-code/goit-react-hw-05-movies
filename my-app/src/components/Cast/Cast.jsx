@@ -22,10 +22,14 @@ export default function Cast() {
             {castData.map(({ id, name, character, profile_path }) => {
               return (
                 <li key={id}>
-                  <img
-                    src={`https://www.themoviedb.org/t/p/w185${profile_path}`}
-                    alt={name}
-                  />
+                  {profile_path ? (
+                    <img
+                      src={`https://www.themoviedb.org/t/p/w185${profile_path}`}
+                      alt={name}
+                    />
+                  ) : (
+                    <p>No Image</p>
+                  )}
                   {character && <p>Character: {character}</p>}
                   <p>Name: {name}</p>
                 </li>
