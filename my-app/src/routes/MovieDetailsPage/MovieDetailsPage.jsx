@@ -17,8 +17,12 @@ export default function MovieDetailsPage() {
   }, [movieId]);
 
   const goBack = () => {
-    navigation("/movies");
-    console.log("location MovieDetailsPage :>> ", location);
+    console.log("location.state (goBack)", location.state);
+    console.log("location.state.from (goBack)", location.state.from);
+
+    location.state && location.state.from
+      ? navigation(location.state.from)
+      : navigation("/");
   };
 
   return (
@@ -30,9 +34,7 @@ export default function MovieDetailsPage() {
       <p>Additional information</p>
       <ul>
         <li>
-          <LinkTo to="cast" state={{ from: location }}>
-            Cast
-          </LinkTo>
+          <LinkTo to="cast">Cast</LinkTo>
         </li>
         <li>
           <LinkTo to="reviews">Review</LinkTo>

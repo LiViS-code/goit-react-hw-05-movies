@@ -1,13 +1,16 @@
 import PropTypes from "prop-types";
 import { ListItem, LinkTo, List } from "../../App.styled";
-export default function MovieList({ movieData }) {
+export default function MovieList({ movieData, location }) {
+  console.log("input location.state", location);
   return (
     <>
       <List>
         {movieData.map(({ id, original_title }) => {
           return (
             <ListItem key={id}>
-              <LinkTo to={`/movies/${id}`}>{original_title}</LinkTo>
+              <LinkTo to={`/movies/${id}`} state={{ from: location }}>
+                {original_title}
+              </LinkTo>
             </ListItem>
           );
         })}

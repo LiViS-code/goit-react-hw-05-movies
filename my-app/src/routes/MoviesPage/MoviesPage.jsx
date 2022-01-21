@@ -24,7 +24,7 @@ export default function MoviesPage() {
   return (
     <>
       <SearchBar setSearch={setSearch} />
-      {movieData && <MovieList movieData={movieData} />}
+      {movieData && <MovieList movieData={movieData} location={location} />}
     </>
   );
 }
