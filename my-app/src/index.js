@@ -12,13 +12,22 @@ const rootElement = document.getElementById("root");
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <ThemeProvider theme={theme}>
-        <Container>
-          <ToastContainer />
-          <App />
-        </Container>
-      </ThemeProvider>
+      <App />
     </BrowserRouter>
   </React.StrictMode>,
-  rootElement
+  document.getElementById("root")
 );
+
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <BrowserRouter>
+//       <ThemeProvider theme={theme}>
+//         <Container>
+//           <ToastContainer />
+//           <App />
+//         </Container>
+//       </ThemeProvider>
+//     </BrowserRouter>
+//   </React.StrictMode>,
+//   rootElement
+// );
