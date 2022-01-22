@@ -10,7 +10,6 @@ export default function MovieDetailsPage() {
   const location = useLocation();
 
   useEffect(() => {
-    console.log("movieId :>> ", movieId);
     getMovieById(movieId).then((data) => {
       setMovieData(data);
     });
