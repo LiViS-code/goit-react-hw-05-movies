@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { Outlet, useParams, useLocation, useNavigate } from "react-router-dom";
-import { LinkTo, Button } from "../../App.styled";
+import { Outlet, useParams, useLocation } from "react-router-dom";
+import { LinkTo } from "../../App.styled";
 import MovieInfo from "../../components/MovieInfo/MovieInfo";
 import { getMovieById } from "../../utils/ApiService";
 
@@ -8,7 +8,6 @@ export default function MovieDetailsPage() {
   const { movieId } = useParams();
   const [movieData, setMovieData] = useState([]);
   const location = useLocation();
-  const navigation = useNavigate();
 
   useEffect(() => {
     getMovieById(movieId).then((data) => {
@@ -16,15 +15,9 @@ export default function MovieDetailsPage() {
     });
   }, [movieId]);
 
-  const goBack = () => {
-    navigation(location?.state?.from ?? "/");
-  };
-
   return (
     <>
-      <Button type="button" onClick={goBack}>
-        &lArr; Go back
-      </Button>
+      <LinkTo to={location?.state?.from ?? "/"}>&lArr; Go back</LinkTo>
       <MovieInfo movieData={movieData} />
       <p>Additional information</p>
       <ul>
