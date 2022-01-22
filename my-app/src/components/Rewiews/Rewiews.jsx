@@ -15,7 +15,8 @@ export default function Reviews() {
 
   return (
     <article>
-      <SubTitle>Reviews</SubTitle>
+      <p>Отзывы к фильму</p>
+      {/* <SubTitle>Reviews</SubTitle>
       {reviewsData.length !== 0 ? (
         <ul>
           {reviewsData.map(({ id, author, content }) => {
@@ -29,7 +30,7 @@ export default function Reviews() {
         </ul>
       ) : (
         <p>Reviews not found!</p>
-      )}
+      )} */}
     </article>
   );
 }

@@ -24,7 +24,8 @@ export default function MovieInfo({ movieData }) {
   return (
     <>
       <Container>
-        <PosterThumb>
+        <p>Информация о фильме</p>
+        {/* <PosterThumb>
           <Poster
             src={
               poster_path
@@ -61,7 +62,7 @@ export default function MovieInfo({ movieData }) {
                 })}
             </GenresList>
           </DataBlock>
-        </DataContainer>
+        </DataContainer> */}
       </Container>
     </>
   );

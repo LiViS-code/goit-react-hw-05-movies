@@ -15,7 +15,8 @@ export default function Cast() {
   return (
     <div>
       <SubTitle>Cast</SubTitle>
-      {castData.length !== 0 ? (
+      <p>Актерский состав</p>
+      {/* {castData.length !== 0 ? (
         <article>
           <ul>
             {castData.map(({ id, name, character, profile_path }) => {
@@ -38,7 +39,7 @@ export default function Cast() {
         </article>
       ) : (
         <p>Cast not found!</p>
-      )}
+      )} */}
     </div>
   );
 }
