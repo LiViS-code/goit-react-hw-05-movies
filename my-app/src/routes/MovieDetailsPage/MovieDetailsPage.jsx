@@ -22,12 +22,18 @@ export default function MovieDetailsPage() {
       <p>Additional information</p>
       <ul>
         <li>
-          <LinkTo to="cast" state={{ from: location?.state?.from ?? "/" }}>
+          <LinkTo
+            to={`/movies/${movieId}/cast`}
+            state={{ from: location?.state?.from ?? "/" }}
+          >
             Cast
           </LinkTo>
         </li>
         <li>
-          <LinkTo to="reviews" state={{ from: location?.state?.from ?? "/" }}>
+          <LinkTo
+            to={`/movies/${movieId}/reviews`}
+            state={{ from: location?.state?.from ?? "/" }}
+          >
             Review
           </LinkTo>
         </li>
