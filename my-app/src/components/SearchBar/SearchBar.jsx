@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { PropTypes } from "prop-types";
 import toastMsg from "../../utils/toastMsg";
 import { SearchForm, SearchInput, SearchButton } from "./SearchBar.styled";
 
@@ -36,3 +37,7 @@ export default function SearchBar({ setSearch }) {
     </SearchForm>
   );
 }
+
+SearchBar.propType = {
+  setSearch: PropTypes.func.isRequired,
+};

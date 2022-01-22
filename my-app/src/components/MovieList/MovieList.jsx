@@ -20,4 +20,5 @@ export default function MovieList({ movieData, location }) {
 
 MovieList.propTypes = {
   movieData: PropTypes.array.isRequired,
+  location: PropTypes.string.isRequired,
 };
