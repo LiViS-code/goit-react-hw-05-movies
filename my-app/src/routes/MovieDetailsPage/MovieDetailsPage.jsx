@@ -10,6 +10,7 @@ export default function MovieDetailsPage() {
   const location = useLocation();
 
   useEffect(() => {
+    console.log("movieId :>> ", movieId);
     getMovieById(movieId).then((data) => {
       setMovieData(data);
     });
@@ -22,12 +23,12 @@ export default function MovieDetailsPage() {
       <p>Additional information</p>
       <ul>
         <li>
-          <LinkTo to="cast" state={{ from: location.state.from }}>
+          <LinkTo to="cast" state={{ from: location?.state?.from ?? "/" }}>
             Cast
           </LinkTo>
         </li>
         <li>
-          <LinkTo to="reviews" state={{ from: location.state.from }}>
+          <LinkTo to="reviews" state={{ from: location?.state?.from ?? "/" }}>
             Review
           </LinkTo>
         </li>
