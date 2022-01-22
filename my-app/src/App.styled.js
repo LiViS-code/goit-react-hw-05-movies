@@ -82,6 +82,7 @@ export const Button = styled.button`
   padding: ${spacing(1)} ${spacing(2)};
   border: none;
   border-radius: ${spacing(2)};
+  font-weight: 700;
   color: inherit;
   outline: 1px solid ${primaryColor};
   transition: color ${timing} ${timingFunction},
@@ -89,7 +90,7 @@ export const Button = styled.button`
   &:hover,
   &:focus {
     cursor: pointer;
-    color: ${reverseColor};
+    color: ${accentColor};
     background-color: ${primaryColor};
   }
   &:disabled,

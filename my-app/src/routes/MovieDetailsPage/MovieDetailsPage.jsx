@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Outlet, useParams, useLocation, useNavigate } from "react-router-dom";
-import { LinkTo } from "../../App.styled";
+import { LinkTo, Button } from "../../App.styled";
 import MovieInfo from "../../components/MovieInfo/MovieInfo";
 import { getMovieById } from "../../utils/ApiService";
 
@@ -22,9 +22,9 @@ export default function MovieDetailsPage() {
 
   return (
     <>
-      <button type="button" onClick={goBack}>
+      <Button type="button" onClick={goBack}>
         &lArr; Go back
-      </button>
+      </Button>
       <MovieInfo movieData={movieData} />
       <p>Additional information</p>
       <ul>
