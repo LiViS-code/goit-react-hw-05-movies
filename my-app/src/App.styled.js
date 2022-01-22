@@ -6,7 +6,6 @@ const {
   colors: {
     accentColor,
     primaryColor,
-    reverseColor,
     backgroundColorForm,
     outlineColor,
     borderDisabledColor,
