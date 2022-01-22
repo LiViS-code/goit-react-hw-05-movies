@@ -10,7 +10,7 @@ export default function App() {
     import("./routes/MovieDetailsPage/MovieDetailsPage")
   );
   const Cast = lazy(() => import("./components/Cast/Cast"));
-  const Rewiews = lazy(() => import("./components/Rewiews/Rewiews"));
+  const Rewiews = lazy(() => import("./components/Reviews/Reviews"));
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
