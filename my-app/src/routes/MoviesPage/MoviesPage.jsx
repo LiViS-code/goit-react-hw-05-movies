@@ -11,7 +11,7 @@ export default function MoviesPage() {
   const searchQuery = new URLSearchParams(location.search).get("query") ?? "";
 
   let setSearch = (request) => {
-    navigation(`${location.search}?query=${request}`);
+    navigation({ ...location, search: `query=${request}` });
   };
 
   useEffect(() => {
