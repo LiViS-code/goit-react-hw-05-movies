@@ -56,8 +56,8 @@ export default function MovieInfo({ movieData }) {
             <GenreTitle>Genres</GenreTitle>
             <GenresList>
               {genres &&
-                genres.map((el) => {
-                  return <GenresListItem key={el.id}>{el.name}</GenresListItem>;
+                genres.map(({ id, name }) => {
+                  return <GenresListItem key={id}>{name}</GenresListItem>;
                 })}
             </GenresList>
           </DataBlock>

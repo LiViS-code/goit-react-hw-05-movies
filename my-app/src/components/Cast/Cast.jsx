@@ -8,9 +8,7 @@ export default function Cast() {
   const [castData, setCastData] = useState([]);
 
   useEffect(() => {
-    getCast(movieId).then((data) => {
-      setCastData(data.cast);
-    });
+    getCast(movieId).then((data) => setCastData(data.cast));
   }, [movieId]);
 
   return (
