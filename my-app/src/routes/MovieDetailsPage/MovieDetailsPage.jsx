@@ -11,9 +11,7 @@ export default function MovieDetailsPage() {
   const cameFrom = location?.state?.from ?? "/";
 
   useEffect(() => {
-    getMovieById(movieId).then((data) => {
-      setMovieData(data);
-    });
+    getMovieById(movieId).then((data) => setMovieData(data));
   }, [movieId]);
 
   return (
@@ -23,12 +21,12 @@ export default function MovieDetailsPage() {
       <p>Additional information</p>
       <ul>
         <li>
-          <LinkTo to="cast" state={{ from: { cameFrom } }}>
+          <LinkTo to="cast" state={{ from: cameFrom }}>
             Cast
           </LinkTo>
         </li>
         <li>
-          <LinkTo to="reviews" state={{ from: { cameFrom } }}>
+          <LinkTo to="reviews" state={{ from: cameFrom }}>
             Review
           </LinkTo>
         </li>
