@@ -12,6 +12,7 @@ export default function Cast() {
       setCastData(data.cast);
     });
   }, [movieId]);
+
   return (
     <div>
       <SubTitle>Cast</SubTitle>
