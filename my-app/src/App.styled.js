@@ -3,16 +3,7 @@ import styled from "styled-components";
 import { theme } from "./constants/Theme";
 
 const {
-  colors: {
-    accentColor,
-    primaryColor,
-    backgroundColorForm,
-    outlineColor,
-    borderDisabledColor,
-    backgroundDisabledColor,
-    backgroundColor,
-    disabledColor,
-  },
+  colors: { accentColor, primaryColor, outlineColor, backgroundColor },
   transition: { timing, timingFunction },
   spacing,
 } = theme;
@@ -23,11 +14,6 @@ export const Container = styled.div`
   border-radius: ${spacing(2)};
   color: ${primaryColor};
   background-color: ${backgroundColor};
-`;
-
-export const Logo = styled.img`
-  width: 50px;
-  margin-right: ${spacing(2)};
 `;
 
 export const Title = styled.h1`
@@ -46,18 +32,6 @@ export const Message = styled.p`
   text-align: center;
 `;
 
-export const MyForm = styled.form`
-  width: 90%;
-  margin-bottom: ${spacing(4)};
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  padding: ${spacing(4)};
-  border: 1px solid ${primaryColor};
-  border-radius: ${spacing(2)};
-  background-color: ${backgroundColorForm}; ;
-`;
-
 export const Label = styled.label`
   margin-bottom: ${spacing(1)};
 `;
@@ -68,9 +42,7 @@ export const Input = styled.input`
   border: none;
   border-radius: ${spacing(2)};
   transition: outline ${timing} ${timingFunction};
-  &[name="number"] {
-    margin-bottom: ${spacing(8)};
-  }
+
   &:hover,
   &:focus {
     outline: 2px solid ${outlineColor};
@@ -86,18 +58,12 @@ export const Button = styled.button`
   outline: 1px solid ${primaryColor};
   transition: color ${timing} ${timingFunction},
     background-color ${timing} ${timingFunction};
+
   &:hover,
   &:focus {
     cursor: pointer;
     color: ${accentColor};
     background-color: ${primaryColor};
-  }
-  &:disabled,
-  &[disabled] {
-    cursor: auto;
-    border: 1px solid ${borderDisabledColor};
-    background-color: ${backgroundDisabledColor};
-    color: ${disabledColor};
   }
 `;
 
@@ -111,15 +77,10 @@ export const ListItem = styled.li`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   &:not(:last-child) {
     margin-bottom: ${spacing(2)};
   }
-`;
-
-export const Note = styled.span`
-  margin-right: ${spacing(3)};
-  font-size: 0.85em;
-  list-style: circle;
 `;
 
 export const LinkTo = styled(Link)`
