@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import SearchBar from "../../components/SearchBar/SearchBar";
-import MovieList from "../../components/MovieList/MovieList";
-import { getMovieByName } from "../../utils/ApiService.js";
+import SearchBar from "components/SearchBar/SearchBar";
+import MovieList from "components/MovieList/MovieList";
+import { getMovieByName } from "utils/ApiService.js";
 
 export default function MoviesPage() {
   const [movieData, setMovieData] = useState(null);

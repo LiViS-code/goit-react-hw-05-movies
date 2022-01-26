@@ -1,6 +1,6 @@
 import { Link as RouterLink } from "react-router-dom";
 import styled from "styled-components";
-import { theme } from "../../constants/Theme";
+import { theme } from "constants/Theme";
 
 const {
   colors: { accentColor, primaryColor },

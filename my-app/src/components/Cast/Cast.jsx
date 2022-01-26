@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { SubTitle } from "../../App.styled";
-import { getCast } from "../../utils/ApiService";
+import { SubTitle } from "App.styled";
+import { getCast } from "utils/ApiService";
 
 export default function Cast() {
   const { movieId } = useParams();

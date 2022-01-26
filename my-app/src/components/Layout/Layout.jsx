@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
-import Navigation from "../Navigation/Navigation";
+import Navigation from "components/Navigation/Navigation";
 import { Header, Footer, Main } from "./Layout.styled";
 
 export default function Layout() {

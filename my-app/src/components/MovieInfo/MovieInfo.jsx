@@ -10,7 +10,7 @@ import {
   GenresListItem,
   GenreTitle,
 } from "./MovieInfo.styled";
-import { SubTitle, Title } from "../../App.styled";
+import { SubTitle, Title } from "App.styled";
 
 export default function MovieInfo({ movieData }) {
   const {

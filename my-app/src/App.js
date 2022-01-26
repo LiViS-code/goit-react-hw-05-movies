@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
-import NotfoundPage from "./components/NotfoundPage/NotfoundPage";
+import NotfoundPage from "components/NotfoundPage/NotfoundPage";
 
 export default function App() {
   const Layout = lazy(() => import("./components/Layout/Layout"));

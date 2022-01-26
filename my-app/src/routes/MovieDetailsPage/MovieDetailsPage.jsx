@@ -1,8 +1,8 @@
 import { useState, useEffect, Suspense } from "react";
 import { Outlet, useParams, useLocation } from "react-router-dom";
-import { Link } from "../../components/Link/Link";
-import MovieInfo from "../../components/MovieInfo/MovieInfo";
-import { getMovieById } from "../../utils/ApiService";
+import { Link } from "components/Link/Link";
+import MovieInfo from "components/MovieInfo/MovieInfo";
+import { getMovieById } from "utils/ApiService";
 
 export default function MovieDetailsPage() {
   const { movieId } = useParams();

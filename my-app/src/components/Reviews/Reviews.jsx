@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { SubTitle } from "../../App.styled";
-import { getReviews } from "../../utils/ApiService";
+import { SubTitle } from "App.styled";
+import { getReviews } from "utils/ApiService";
 
 export default function Reviews() {
   const { movieId } = useParams();

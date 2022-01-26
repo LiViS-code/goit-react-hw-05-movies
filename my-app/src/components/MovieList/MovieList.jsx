@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-import { ListItem, List } from "../../App.styled";
-import { Link } from "../../components/Link/Link";
+import { ListItem, List } from "App.styled";
+import { Link } from "components/Link/Link";
 export default function MovieList({ movieData, location }) {
   return (
     <>

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { Title } from "../../App.styled";
-import MovieList from "../../components/MovieList/MovieList";
-import { getMovieTrending } from "../../utils/ApiService";
+import { Title } from "App.styled";
+import MovieList from "components/MovieList/MovieList";
+import { getMovieTrending } from "utils/ApiService";
 
 export default function Home() {
   const [movieTrending, setMovieTrending] = useState([]);
