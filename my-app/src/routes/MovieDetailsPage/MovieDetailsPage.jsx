@@ -8,7 +8,7 @@ export default function MovieDetailsPage() {
   const { movieId } = useParams();
   const [movieData, setMovieData] = useState([]);
   const location = useLocation();
-  const cameFrom = location?.state?.from ?? "/";
+  const goBackURL = location?.state?.from ?? "/";
 
   useEffect(() => {
     getMovieById(movieId).then(setMovieData);
@@ -16,17 +16,17 @@ export default function MovieDetailsPage() {
 
   return (
     <>
-      <Link to={cameFrom}>&lArr; Go back</Link>
+      <Link to={goBackURL}>&lArr; Go back</Link>
       <MovieInfo movieData={movieData} />
       <p>Additional information</p>
       <ul>
         <li>
-          <Link to="cast" state={{ from: cameFrom }}>
+          <Link to="cast" state={{ from: goBackURL }}>
             Cast
           </Link>
         </li>
         <li>
-          <Link to="reviews" state={{ from: cameFrom }}>
+          <Link to="reviews" state={{ from: goBackURL }}>
             Review
           </Link>
         </li>
