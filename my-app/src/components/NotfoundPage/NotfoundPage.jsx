@@ -1,4 +1,4 @@
-import { Link } from "../../App.styled";
+import { Link } from "../../components/Link/Link";
 
 export default function NotfoundPage() {
   return (

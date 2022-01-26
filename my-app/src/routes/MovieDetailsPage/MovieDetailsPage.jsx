@@ -1,6 +1,6 @@
 import { useState, useEffect, Suspense } from "react";
 import { Outlet, useParams, useLocation } from "react-router-dom";
-import { Link } from "../../App.styled";
+import { Link } from "../../components/Link/Link";
 import MovieInfo from "../../components/MovieInfo/MovieInfo";
 import { getMovieById } from "../../utils/ApiService";
 
