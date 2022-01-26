@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { ListItem, LinkTo, List } from "../../App.styled";
+import { ListItem, Link, List } from "../../App.styled";
 export default function MovieList({ movieData, location }) {
   return (
     <>
@@ -7,9 +7,9 @@ export default function MovieList({ movieData, location }) {
         {movieData.map(({ id, original_title }) => {
           return (
             <ListItem key={id}>
-              <LinkTo to={`/movies/${id}`} state={{ from: location }}>
+              <Link to={`/movies/${id}`} state={{ from: location }}>
                 {original_title}
-              </LinkTo>
+              </Link>
             </ListItem>
           );
         })}

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 import styled from "styled-components";
 import { theme } from "./constants/Theme";
 
@@ -83,7 +83,7 @@ export const ListItem = styled.li`
   }
 `;
 
-export const LinkTo = styled(Link)`
+export const Link = styled(RouterLink)`
   padding: ${spacing(1)} ${spacing(2)};
   color: inherit;
   text-decoration: none;
